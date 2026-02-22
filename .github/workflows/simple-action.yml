@@ -1,0 +1,13 @@
+name: Simple Action with Email  # Visible name in GitHub UI
+
+on: [push]  # Triggers on any push to any branch
+
+jobs:
+  test:  # Job name (can be anything)
+    runs-on: ubuntu-latest  # Free GitHub runner (virtual Ubuntu machine)
+    steps:
+      - name: Checkout code  # Step 1: Get your repo files
+        uses: actions/checkout@v4  # Reusable action from GitHub
+
+      - name: 23f3001446@ds.study.iitm.ac.in  # REQUIRED: Your email here
+        run: echo "Hello from my GitHub Action!"  # Simple command
