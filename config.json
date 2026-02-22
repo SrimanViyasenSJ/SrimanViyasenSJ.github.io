@@ -26,9 +26,22 @@
     {"id": "prod-545fbabb-020", "name": "Premium Item 20", "category": "books", "price": 488.47, "stock": 87, "rating": 3.2}
   ],
   "aggregations": {
-    "books": {
-      "count": 6,
-      "inventoryValue": 171953.64
-    }
+  "books": {
+    "count": 6,
+    "inventoryValue": 171953.64
+  },
+  "electronics": {
+    "count": 4,
+    "inventoryValue": 194782.38
+  },
+  "home": {
+    "count": 7,
+    "inventoryValue": 331650.85
+  },
+  "sports": {
+    "count": 3,
+    "inventoryValue": 47295.59
   }
+}
+
 }
