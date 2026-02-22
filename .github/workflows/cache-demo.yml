@@ -1,0 +1,20 @@
+name: Cache Demo
+
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Prime cache and show result
+        id: prime-cache-6a0ec14
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm  # Example: cache npm (change if your project uses pip, Maven, etc.)
+          key: cache-6a0ec14
+      
+      - name: Echo cache result
+        run: echo "Cache hit: ${{ steps.prime-cache-6a0ec14.outputs.cache-hit }}"
